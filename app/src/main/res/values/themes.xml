@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Energy_Statistics" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Energy_Statistics" parent="Base.Theme.Energy_Statistics" >
+        <item name="colorPrimary">#ADD8E6</item>
+        <item name="colorAccent">#ADD8E6</item>
+    </style>
+</resources>

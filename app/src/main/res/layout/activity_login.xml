@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.example.energy_statistics.ui.activity.login.LoginViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical"
+        android:background="#ADD8E6"
+        android:gravity="center_horizontal"
+        tools:context=".ui.activity.login.LoginActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_marginTop="80dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="Прикладное программного приложение для учета энергоресурсов"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/bg_edt_login"
+            android:hint="Email or username"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:text="@={loginViewModel.email}"
+            android:textColor="@color/black"
+            android:textColorHint="#898989"
+            android:textSize="17sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_edt_login"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:text="@={loginViewModel.password}"
+            android:textColor="@color/black"
+            android:textColorHint="#898989"
+            android:textSize="17sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_login"
+            android:gravity="center"
+            android:onClick="@{v -> loginViewModel.login()}"
+            android:paddingHorizontal="60dp"
+            android:text="Log in"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Sign up"
+            android:onClick="@{v -> loginViewModel.startSignUp()}"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+</layout>
